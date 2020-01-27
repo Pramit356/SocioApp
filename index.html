@@ -3,6 +3,8 @@
 
 <head>
     <title>SocioApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <style>
         .header img {
             float: left;
@@ -13,20 +15,62 @@
 
         .header h1 {
             position: relative;
+            display: inline-block;
+            margin: 0;
             left: 10px;
         }
+
+        .header button {
+            position: relative;
+            left: 10px;
+            float: right;
+            font-size: 16px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color:blue;
+            position: fixed;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+
     </style>
     <script src="scripts/script.js"></script>
 </head>
 
 <body>
-
     <div class="header">
         <img src="img/logo.png" alt="logo" />
         <h1>SocioApp</h1>
+        <button class="login">Login</button>
+        <button class="signup">Sign up</button>
     </div>
-    <p>This is a paragraph.</p>
-    <button onclick="clickEvent()">Click Me</button>
+
+    <div class="navbar">
+        <a href="facebook.com">Facebook</a>
+        <a href="twitter.com">Twitter</a>
+        <a href="instagram.com">Instagram</a>
+    </div>
+
+    <div class="main">
+        <p>Some text some text some text some text..</p>
+    </div>
+
+
 
 </body>
 

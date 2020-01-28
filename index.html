@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="google-signin-client_id"
         content="62220692038-btd0sq6qr1ebionsonic870ao5qf4gu8.apps.googleusercontent.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <style>
         .header img {
             float: left;
@@ -80,12 +82,38 @@
 
         .jumbotron1 {
             color: black;
-            background-color: rgb(226, 224, 224);
+            background-color: rgb(218, 216, 216);
             background-size: auto 100%;
         }
 
         .lead1 {
             text-align: center;
+        }
+
+        .separateHandles {
+            border-top: 1px solid #dad8d8;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 10px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
         }
     </style>
 
@@ -117,20 +145,20 @@
             <img src="img/logo.png" alt="logo" />
             <h1>SocioApp</h1>
             <button type="button" class="login" data-toggle="modal" data-target="#exampleModalCenter"">Login</button>
-            <button class=" signup">Sign up</button>
+            <button type=" button" class="login" data-toggle="modal" data-target="#exampleModalCenter1"">Sign up</button>
         </div>
 
-        <div class="navbar">
-            <a href="facebook.com">Facebook</a>
-            <a href="twitter.com">Twitter</a>
-            <a href="instagram.com">Instagram</a>
-            <a href="instagram.com">Instagram1</a>
+        <div class=" navbar">
+                <a href="facebook.com">Facebook</a>
+                <a href="twitter.com">Twitter</a>
+                <a href="instagram.com">Instagram</a>
+                <a href="instagram.com">Instagram1</a>
         </div>
         <br>
         <br>
         <br>
 
-        <!-- Modal -->
+        <!-- Login form -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -165,6 +193,59 @@
                 </div>
             </div>
         </div>
+
+        <!-- Sign up form -->
+        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Sign up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="reEnterPassword1">Re-enter Password</label>
+                                <input type="password" class="form-control" id="reEnterPassword1"
+                                    placeholder="Enter again">
+                            </div>
+                            <hr class="separateHandles">
+
+                            <div class="form-group">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </div>
+
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 
         <div class="jumbotron1">
             <div class="container">

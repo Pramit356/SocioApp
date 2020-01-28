@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         .header img {
             float: left;
@@ -95,9 +95,9 @@
         }
 
         .fa {
-            padding: 20px;
-            font-size: 10px;
-            width: 30px;
+            padding: 5px;
+            font-size: 20px;
+            width: 50px;
             text-align: center;
             text-decoration: none;
         }
@@ -107,13 +107,18 @@
         }
 
         .fa-facebook {
-            background: #3B5998;
-            color: white;
+            background: white;
+            color: #3B5998;
         }
 
         .fa-twitter {
-            background: #55ACEE;
-            color: white;
+            background: white;
+            color: #55ACEE;
+        }
+
+        .fa-instagram {
+            background: white;
+            color: #3f729b;
         }
     </style>
 
@@ -131,10 +136,10 @@
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('ID: ' + profile.getId());
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            console.log('Email: ' + profile.getEmail());
         }
     </script>
 </head>
@@ -227,8 +232,52 @@
                             <hr class="separateHandles">
 
                             <div class="form-group">
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-twitter"></a>
+                                <i class="fa fa-facebook"></i>
+                                <label for="exampleInputEmail1" style="color: #3B5998;">Facebook credentials</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Facebook Email/username</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Facebook Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <hr class="separateHandles">
+
+                            <div class="form-group">
+                                <i class="fa fa-twitter"></i>
+                                <label for="exampleInputEmail1" style="color: #55ACEE;">Twitter credentials</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Twitter Email/username</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Twitter Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <hr class="separateHandles">
+
+                            <div class="form-group">
+                                <i class="fa fa-instagram"></i>
+                                <label for="exampleInputEmail1" style="color: #3f729b;">Instagram credentials</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Instagram Email/username</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Instagram Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
                             </div>
 
 
@@ -236,7 +285,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary">Sign in</button>
                     </div>
                 </div>
             </div>

@@ -156,10 +156,10 @@
         </div>
 
         <div class=" navbar">
-                <a href="facebook.com">Facebook</a>
-                <a href="twitter.com">Twitter</a>
-                <a href="instagram.com">Instagram</a>
-                <a href="instagram.com">Instagram1</a>
+            <button style="background-color: transparent; border: none; color: white;" onclick="twitter_rss()">Twitter</button>
+            <button style="background-color: transparent; border: none; color: white;" onclick="insta_rss()">Instagram</button>
+            <button style="background-color: transparent; border: none; color: white;" onclick="fb_rss()">Facebook</button>
+            <button style="background-color: transparent; border: none; color: white;" onclick="reddit_rss()">Reddit</button>
         </div>
         <br>
         <br>
@@ -294,6 +294,7 @@
             </div>
         </div>
 
+        <div id="dynamic_content">
         <div class="jumbotron1">
             <div class="container">
                 <div class="row">
@@ -419,7 +420,50 @@
         </div>
         <br>
         <br>
+        </div>
     </div>
+
+    <script>
+        function twitter_rss() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "ajax_info.json", true);
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    var output = JSON.parse(this.responseText);
+                    document.getElementById('dynamic_content').innerHTML = output[0];
+                }
+            };
+            
+            xhttp.send();
+        }
+
+        function insta_rss() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "ajax_info.json", true);
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    var output = JSON.parse(this.responseText);
+                    document.getElementById('dynamic_content').innerHTML = output[1];
+                }
+            };
+            
+            xhttp.send();
+        }
+
+        function fb_rss() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "ajax_info.json", true);
+            xhttp.onload = function() {
+                if (this.status == 200) {
+                    var output = JSON.parse(this.responseText);
+                    document.getElementById('dynamic_content').innerHTML = output[2];
+                }
+            };
+            
+            xhttp.send();
+        }
+        
+    </script>
     </body>
 
 </html>
